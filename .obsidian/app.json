@@ -1,0 +1,8 @@
+{
+  "spellcheck": true,
+  "vimMode": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "New",
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
+}

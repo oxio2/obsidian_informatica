@@ -1,0 +1,46 @@
+- Motivi
+	- Germania 
+		- Sindrome di accerchiamento
+		- Domini coloniali ridotti malgrado la potenza
+	- Revanscismo Francese
+	- Clima imperialista e nazionalista aggressivo
+	- Corsa generali agli armamenti
+	 - Tensioni dalle guerre
+		 - Anglo boera
+		 - Crisi marocchine
+	 - Instabilità nei Balcani
+		 - Debolezza impero ottomano
+		 - Austria vuole espandersi nei Balcani
+		 - Russia vuole uno sbocco sul Mediterraneo
+		- Italia Irredentismo
+		- Gran Bregana vuole il Mediterraneo
+		- Serbia gran nazionalismo serbo
+		- Altri stati dei balcani
+- Italia
+	- Non entra subito in guerra
+		- La triplice alleanza è esclusivamente difensiva
+		- L'intervento nei balcani doveva essere comunicato
+		- L'italia non era preparata alla guerra
+	- Divisa tra
+		- Interventisti
+		- Neutralisti
+		- Neutralisti condizionati
+	- Come entra in guerra(1915)
+		- Patto di londra ad insaputa del parlamento in cambio di concessioni territoriali
+			- Trentino e sud tirolo (Trentino alto adige di oggi)
+			- Trieste e gorizia
+			- Istria (no fiume) e parte della dalmazia
+	- Disfatta di Caporetto(1916)
+		- Varie Modifiche
+			- Generale Cadorna sostituito con Armando Diaz
+			- Riduzione assalti inutili
+			- Concessione maggiore rancio
+			- Garanzia di turni di riposo effettivi
+			- Concedimento di licenze
+			- Ci P di propaganda militare
+			- Mandati i ragazzi nel 99
+		- Vittorio Veneto
+   
+   
+		
+ 
