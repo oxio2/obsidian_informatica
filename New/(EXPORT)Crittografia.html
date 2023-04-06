@@ -1,0 +1,3109 @@
+<!doctype html>
+<html>
+    <head>
+        <title>(EXPORT)Crittografia</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-focused {outline: 1px dotted #212121;}
+.ͼ1 {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {position: absolute; left: 0; top: 0; contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1 .cm-dropCursor {position: absolute;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace:before {content: attr(data-display); position: absolute; pointer-events: none; color: #888;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
+.ͼp .cm-vimMode .cm-cursorLayer:not(.cm-vimCursorLayer) {display: none;}
+.ͼp .cm-vim-panel {padding: 0px 10px; font-family: monospace; min-height: 1.3em;}
+.ͼp .cm-vim-panel input {border: none; outline: none;}
+.ͼo .cm-vimMode .cm-line {caret-color: transparent !important;}
+.ͼo .cm-fat-cursor {position: absolute; border: none; white-space: pre;}
+.ͼo.cm-focused .cm-fat-cursor {background: var(--interactive-accent); color: var(--text-on-accent);}
+.ͼo:not(.cm-focused) .cm-fat-cursor {outline: solid 1px #ff9696; color: transparent;}
+ :root {
+  --advanced-tables-helper-size: 28px;
+}
+
+.HyperMD-table-row span.cm-inline-code {
+  font-size: 100%;
+  padding: 0px;
+}
+
+.advanced-tables-buttons>div>.title {
+  font-weight: var(--font-medium);
+  font-size: var(--nav-item-size);
+  color: var(--nav-item-color);
+  text-decoration: underline;
+}
+
+[data-type="advanced-tables-toolbar"] .nav-buttons-container {
+  column-gap: 0.2rem;
+  margin: 0.2rem 0 0.2rem 0;
+  justify-content: start;
+}
+
+[data-type="advanced-tables-toolbar"] .nav-buttons-container::before {
+  min-width: 2.6rem;
+  line-height: var(--advanced-tables-helper-size);
+  font-size: var(--nav-item-size);
+  font-weight: var(--nav-item-weight);
+  color: var(--nav-item-color);
+}
+
+[data-type="advanced-tables-toolbar"] .nav-buttons-container>* {
+  height: var(--advanced-tables-helper-size);
+  line-height: var(--advanced-tables-helper-size);
+}
+
+[data-type="advanced-tables-toolbar"] .nav-buttons-container .nav-action-button {
+  width: var(--advanced-tables-helper-size);
+  height: var(--advanced-tables-helper-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-s);
+}
+
+[data-type="advanced-tables-toolbar"] .nav-buttons-container .nav-action-button:hover {
+  background-color: var(--nav-item-background-hover);
+  color: var(--nav-item-color-hover);
+  font-weight: var(--nav-item-weight-hover);
+}
+
+.advanced-tables-row-label {
+  width: 50px;
+}
+
+.widget-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-muted);
+}
+
+.widget-icon:hover {
+  fill: var(--text-normal);
+}
+
+.advanced-tables-csv-export textarea {
+  height: 200px;
+  width: 100%;
+}
+
+.advanced-tables-donation {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.advanced-tables-donate-button {
+  margin: 10px;
+} .ob-timelines {
+    display: none;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background-color: var(--background-secondary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+/* Container around content */
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+/* The circles on the timeline */
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--background-secondary);
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Place the container to the left */
+
+.timeline-left {
+    left: 0;
+}
+
+
+/* Place the container to the right */
+
+.timeline-right {
+    left: 50%;
+}
+
+
+/* Add arrows to the left container (pointing right) */
+
+.timeline-left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--background-secondary);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--background-secondary);
+}
+
+
+/* Add arrows to the right container (pointing left) */
+
+.timeline-right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--background-secondary);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--background-secondary) transparent transparent;
+}
+
+
+/* Fix the circle for containers on the right side */
+
+.timeline-right::after {
+    left: -16px;
+}
+
+
+/* The actual content */
+
+.timeline-content {
+    padding: 10px 15px;
+    background-color: var(--background-accent);
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-card {
+    grid-auto-rows: min-content;
+    color: #d1c077;
+    padding: 1px;
+}
+
+.timeline-card .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.timeline-card {
+    background: var(--background-secondary);
+    text-decoration: none !important;
+    color: var(--text-normal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+    margin-block-end: 20px;
+    border-radius: 10px;
+}
+
+.timeline-card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-card article {
+    padding-left: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.timeline-card p {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.timeline-rendered {
+    color: var(--text-faint);
+    font-size: smaller;
+}
+
+.timeline-rendered::before {
+    content: "Updated: ";
+}
+
+
+/* Vis Timeline */
+
+.vis-timeline {
+    border: 1px solid transparent;
+}
+
+.vis-item-content .timeline-card {
+    display: none;
+    width: 300px;
+    height: max-content;
+    position: fixed !important;
+}
+
+.vis-item-overflow .timeline-card {
+    display: none;
+    width: 300px;
+    height: max-content;
+    position: fixed !important;
+}
+
+.vis-item .vis-item-overflow {
+    overflow: visible;
+}
+
+.vis-item.orange {
+    background-color: rgba(255, 0, 0, 0.295);
+    filter: none;
+    border-color: orange;
+}
+
+.vis-item.vis-selected.orange {
+    /* custom colors for selected orange items */
+    background-color: orange;
+    border-color: orangered;
+}
+
+.vis-panel.vis-center,
+.vis-panel.vis-left,
+.vis-panel.vis-right {
+    border-color: var(--background-secondary);
+}
+
+.vis-grid.vis-minor {
+    display: none;
+}
+
+.vis-grid.vis-major {
+    display: none;
+}
+
+
+/* Vis Timeline Navigation */
+
+.vis-navigation-input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    width: 65% !important;
+    background-color: var(--background-secondary-alt);
+    border: none;
+    border-radius: 7px;
+    height: auto;
+    width: max-content;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    overflow-wrap: break-word;
+    color: var(--text-normal);
+    appearance: textfield;
+    cursor: text;
+    font-family: "Comic Sans MS" !important;
+    font-size: 15px !important;
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+ .setting-item.ex-setting-item {
+    border-top: unset;
+    padding-top: 0;
+}
+
+*[hidden] {
+    display: none;
+} .theme-dark {
+  --background-primary: #272b34;
+  --background-primary-alt: #20242b;
+  --background-secondary: #20242b;
+  --background-secondary-alt: #1a1e24;
+  --background-accent: #000;
+  --background-modifier-border: #424958;
+  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #539126;
+  --background-modifier-error: #3d0000;
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: #470000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+  --text-accent: #61afef;
+  --text-accent-hover: #69bafd;
+  --text-normal: #dcddde;
+  --text-muted: #888;
+  --text-faint: rgb(81, 86, 99);
+  --text-error: #e16d76;
+  --text-error-hover: #c9626a;
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-selection: rgba(0, 122, 255, 0.2);
+  --text-on-accent: #dcddde;
+  --interactive-normal: #20242b;
+  --interactive-hover: #353b47;
+  --interactive-accent: #4c78cc;
+  --interactive-accent-rgb: 76, 120, 204;
+  --interactive-accent-hover: #5082df;
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+  --scrollbar-bg: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+  --panel-border-color: #18191e;
+  --gray-1: #5C6370;
+  --gray-2: #abb2bf;
+  --red: #e06c75;
+  --orange: #d19a66;
+  --green: #98c379;
+  --aqua: #56b6c2;
+  --purple: #c678dd;
+  --blue: #61afef;
+  --yellow: #e5c07b;
+}
+
+.theme-light {
+  --background-primary: #fafafa;
+  --background-primary-alt: #eaeaeb;
+  --background-secondary: #eaeaeb;
+  --background-secondary-alt: #dbdbdc;
+  --background-accent: #fff;
+  --background-modifier-border: #dbdbdc;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #A4E7C3;
+  --background-modifier-error: #e68787;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #FF9494;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #1592ff;
+  --text-accent-hover: #2d9dff;
+  --text-normal: #383a42;
+  --text-muted: #8e8e90;
+  --text-faint: #999999;
+  --text-error: #e75545;
+  --text-error-hover: #f86959;
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-selection: rgba(0, 122, 255, 0.15);
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #eaeaeb;
+  --interactive-hover: #dbdbdc;
+  --interactive-accent-rgb: 21, 146, 255;
+  --interactive-accent: #5871ef;
+  --interactive-accent-hover: #445bd1;
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+  --panel-border-color: #dbdbdc;
+  --gray-1: #383a42;
+  --gray-2: #383a42;
+  --red: #e75545;
+  --green: #4ea24c;
+  --blue: #3d74f6;
+  --purple: #a625a4;
+  --aqua: #0084bc;
+  --yellow: #e35649;
+  --orange: #986800;
+}
+
+body {
+  -webkit-font-smoothing: auto;
+}
+
+.titlebar {
+  background-color: var(--background-secondary-alt);
+}
+
+.titlebar-inner {
+  color: var(--text-normal);
+}
+
+.tooltip {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-muted);
+}
+
+.tooltip:not(.mod-right):not(.mod-left):not(.mod-top) .tooltip-arrow {
+  border-bottom-color: var(--background-secondary-alt) !important;
+}
+
+.mod-right .tooltip-arrow {
+  border-right-color: var(--background-secondary-alt) !important;
+}
+
+.mod-left .tooltip-arrow {
+  border-left-color: var(--background-secondary-alt) !important;
+}
+
+.mod-top .tooltip-arrow {
+  border-top-color: var(--background-secondary-alt) !important;
+}
+
+.dropdown {
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234c78cc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.dropdown:hover {
+  background-color: var(--background-modifier-form-field);
+}
+
+.search-result-file-title {
+  color: var(--blue);
+}
+
+li {
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+}
+
+a.tag, a.tag:hover {
+  color: var(--yellow);
+  background-color: var(--background-primary-alt);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  border-radius: 2px;
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0;
+  filter: none;
+  outline: none;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked {
+  border: none;
+  background-color: var(--interactive-accent);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: ' ';
+  position: absolute;
+  background-color: white;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 14 14\'%3E%3Cpolygon points=\'5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039\'%3E%3C/polygon%3E%3C/svg%3E');
+}
+
+.markdown-preview-view .task-list-item.is-checked a {
+  filter: saturate(0.8) brightness(0.7);
+}
+
+.cm-formatting-task {
+  font-family: var(--font-monospace);
+}
+
+.nav-file, .nav-folder {
+  padding: 1px 2px;
+}
+
+.nav-file-title, .nav-folder-title {
+  width: 100%;
+  cursor: default;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  --text-normal: var(--text-muted);
+}
+
+body:not(.is-grabbing) .nav-file .nav-file-title:hover:not(.is-active), body:not(.is-grabbing) .nav-folder .nav-folder-title:hover:not(.is-active) {
+  --background-secondary-alt: transparent;
+}
+
+.nav-file .is-active {
+  --background-secondary-alt: var(--interactive-accent);
+  --text-normal: #ffffff;
+}
+
+.nav-file-title-content, .nav-folder-title-content {
+  text-indent: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section, .markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: 900px !important;
+  line-height: 26px;
+}
+
+blockquote {
+  margin: 20px 0;
+  border-radius: 4px !important;
+}
+
+body {
+  --font-monospace: 'Fira Code', 'Source Code Pro', monospace;
+}
+
+mjx-container[jax='CHTML'] {
+  text-align: left;
+  outline: none;
+}
+
+.math-block {
+  font-size: 1.25em;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end), .markdown-preview-view code {
+  /* fix `` tag color */
+  color: #98c379;
+}
+
+.cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder {
+  /* fix tag size */
+  font-weight: 100;
+  font-style: normal;
+}
+
+.markdown-preview-view code {
+  vertical-align: 0;
+  word-break: break-word;
+}
+
+.markdown-preview-section:not(:first-child) h1, .markdown-preview-section:not(:first-child) h2, .markdown-preview-section:not(:first-child) h3, .markdown-preview-section:not(:first-child) h4, .markdown-preview-section:not(:first-child) h5, .markdown-preview-section:not(:first-child) h6 {
+  margin-top: 40px !important;
+}
+
+.markdown-preview-section h1, .markdown-preview-section h2, .markdown-preview-section h3, .markdown-preview-section h4, .markdown-preview-section h5, .markdown-preview-section h6 {
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
+  font-weight: 600;
+}
+
+.workspace>.workspace-split>.workspace-leaf:first-of-type:last-of-type .view-header {
+  border: none;
+}
+
+.status-bar, .side-dock.mod-right, .side-dock.mod-left {
+  border-color: var(--panel-border-color);
+  border-width: 1px;
+}
+
+.status-bar {
+  --bar-vertical-padding: 4px;
+  --bar-height: calc(22px + (var(--bar-vertical-padding) * 2));
+  line-height: 20px;
+  padding: 0 20px;
+  height: var(--bar-height);
+  max-height: var(--bar-height);
+  min-height: var(--bar-height);
+  overflow: hidden;
+}
+
+.status-bar-item {
+  margin: auto 0;
+}
+
+.status-bar-item>* {
+  padding-top: var(--bar-vertical-padding) !important;
+  padding-bottom: var(--bar-vertical-padding) !important;
+}
+
+.side-dock-plugin-panel-inner {
+  padding-left: 6px;
+}
+
+a, .markdown-preview-view .internal-link {
+  text-decoration: none;
+}
+
+a:hover, .markdown-preview-view .internal-link:hover {
+  text-decoration: underline;
+}
+
+.theme-dark :not(pre)>code[class*='language-'], .theme-dark pre[class*='language-'] {
+  background: var(--background-primary-alt);
+}
+
+.theme-light :not(pre)>code[class*='language-'], .theme-light pre[class*='language-'] {
+  background: var(--background-primary);
+  box-shadow: inset 0 0 0 1px var(--background-primary-alt);
+  border-radius: 4px;
+}
+
+.markdown-embed:not(.hover-popover .markdown-embed), .file-embed {
+  margin: 0;
+  border-radius: 4px;
+  margin: 0 !important;
+  margin-inline-start: 30px !important;
+  margin-inline-end: 30px !important;
+}
+
+.markdown-embed {
+  border: 1px solid var(--background-modifier-border);
+  border-left-width: 5px;
+}
+
+.markdown-embed .markdown-preview-view {
+  padding: 0 20px;
+}
+
+.markdown-embed-link, .file-embed-link {
+  left: 8px;
+  right: unset;
+}
+
+.theme-light .token.operator, .theme-light .token.entity, .theme-light .token.url, .theme-light .language-css .token.string, .theme-light .style .token.string {
+  background: transparent;
+}
+
+/* Source: https://github.com/AGMStudio/prism-theme-one-dark */
+
+code[class*='language-'], pre[class*='language-'] {
+  text-align: left !important;
+  white-space: pre !important;
+  word-spacing: normal !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  line-height: 1.5 !important;
+  -moz-tab-size: 4 !important;
+  -o-tab-size: 4 !important;
+  tab-size: 4 !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+}
+
+/* Code blocks */
+
+pre[class*='language-'] {
+  padding: 1em !important;
+  margin: .5em 0 !important;
+  overflow: auto !important;
+}
+
+/* Inline code */
+
+:not(pre)>code[class*='language-'] {
+  padding: .1em !important;
+  border-radius: .3em !important;
+  white-space: normal !important;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: var(--gray-1) !important;
+}
+
+.token.punctuation {
+  color: var(--gray-2) !important;
+}
+
+.token.selector, .token.tag {
+  color: var(--red) !important;
+}
+
+.token.property, .token.boolean, .token.number, .token.constant, .token.symbol, .token.attr-name, .token.deleted {
+  color: var(--orange) !important;
+}
+
+.token.string, .token.char, .token.attr-value, .token.builtin, .token.inserted {
+  color: var(--green) !important;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: var(--aqua) !important;
+}
+
+.token.atrule, .token.keyword {
+  color: var(--purple) !important;
+}
+
+.token.function, .token.macro.property {
+  color: var(--blue) !important;
+}
+
+.token.class-name {
+  color: var(--yellow) !important;
+}
+
+.token.regex, .token.important, .token.variable {
+  color: var(--purple) !important;
+}
+
+.token.important, .token.bold {
+  font-weight: bold !important;
+}
+
+.token.italic {
+  font-style: italic !important;
+}
+
+.token.entity {
+  cursor: help !important;
+}
+
+pre.line-numbers {
+  position: relative !important;
+  padding-left: 3.8em !important;
+  counter-reset: linenumber !important;
+}
+
+pre.line-numbers>code {
+  position: relative !important;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute !important;
+  pointer-events: none !important;
+  top: 0 !important;
+  font-size: 100% !important;
+  left: -3.8em !important;
+  width: 3em !important;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px !important;
+  border-right: 0 !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.line-numbers-rows>span {
+  pointer-events: none !important;
+  display: block !important;
+  counter-increment: linenumber !important;
+}
+
+.line-numbers-rows>span:before {
+  content: counter(linenumber) !important;
+  color: var(--syntax-gray-1) !important;
+  display: block !important;
+  padding-right: 0.8em !important;
+  text-align: right !important;
+}
+ .vis-time-axis {
+  position: relative;
+  overflow: hidden;
+}
+
+.vis-time-axis.vis-foreground {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.vis-time-axis.vis-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vis-time-axis .vis-text {
+  position: absolute;
+  color: #4d4d4d;
+  padding: 3px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  white-space: nowrap;
+}
+
+.vis-time-axis .vis-text.vis-measure {
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  visibility: hidden;
+}
+
+.vis-time-axis .vis-grid.vis-vertical {
+  position: absolute;
+  border-left: 1px solid;
+}
+
+.vis-time-axis .vis-grid.vis-vertical-rtl {
+  position: absolute;
+  border-right: 1px solid;
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+  border-color: #e5e5e5;
+}
+
+.vis-time-axis .vis-grid.vis-major {
+  border-color: #bfbfbf;
+}
+
+.vis .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Must be displayed above for example selected Timeline items */
+  z-index: 10;
+}
+
+.vis-active {
+  box-shadow: 0 0 10px #86d5f8;
+}
+
+.vis-custom-time {
+  background-color: #6E94FF;
+  width: 2px;
+  cursor: move;
+  z-index: 1;
+}
+
+.vis-custom-time > .vis-custom-time-marker {
+  background-color: inherit;
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 3px 5px;
+  top: 0px;
+  cursor: initial;
+  z-index: inherit;
+}
+.vis-timeline {
+  /*
+  -webkit-transition: height .4s ease-in-out;
+  transition:         height .4s ease-in-out;
+  */
+}
+
+.vis-panel {
+  /*
+  -webkit-transition: height .4s ease-in-out, top .4s ease-in-out;
+  transition:         height .4s ease-in-out, top .4s ease-in-out;
+  */
+}
+
+.vis-axis {
+  /*
+  -webkit-transition: top .4s ease-in-out;
+  transition:         top .4s ease-in-out;
+  */
+}
+
+/* TODO: get animation working nicely
+
+.vis-item {
+  -webkit-transition: top .4s ease-in-out;
+  transition:         top .4s ease-in-out;
+}
+
+.vis-item.line {
+  -webkit-transition: height .4s ease-in-out, top .4s ease-in-out;
+  transition:         height .4s ease-in-out, top .4s ease-in-out;
+}
+/**/
+.vis-current-time {
+  background-color: #FF7F6E;
+  width: 2px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.vis-rolling-mode-btn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: #3876c2;
+}
+.vis-rolling-mode-btn:before {
+  content: "\26F6";
+}
+
+.vis-rolling-mode-btn:hover {
+  opacity: 1;
+}
+.vis-panel {
+  position: absolute;
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+.vis-panel.vis-center,
+.vis-panel.vis-left,
+.vis-panel.vis-right,
+.vis-panel.vis-top,
+.vis-panel.vis-bottom {
+  border: 1px #bfbfbf;
+}
+
+.vis-panel.vis-center,
+.vis-panel.vis-left,
+.vis-panel.vis-right {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  overflow: hidden;
+}
+
+.vis-left.vis-panel.vis-vertical-scroll, .vis-right.vis-panel.vis-vertical-scroll {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} 
+
+.vis-left.vis-panel.vis-vertical-scroll {
+  direction: rtl;
+}
+
+.vis-left.vis-panel.vis-vertical-scroll .vis-content {
+  direction: ltr;
+}
+
+.vis-right.vis-panel.vis-vertical-scroll {
+  direction: ltr;
+}
+
+.vis-right.vis-panel.vis-vertical-scroll .vis-content {
+  direction: rtl;
+}
+
+.vis-panel.vis-center,
+.vis-panel.vis-top,
+.vis-panel.vis-bottom {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.vis-background {
+  overflow: hidden;
+}
+
+.vis-panel > .vis-content {
+  position: relative;
+}
+
+.vis-panel .vis-shadow {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  /* TODO: find a nice way to ensure vis-shadows are drawn on top of items
+  z-index: 1;
+  */
+}
+
+.vis-panel .vis-shadow.vis-top {
+  top: -1px;
+  left: 0;
+}
+
+.vis-panel .vis-shadow.vis-bottom {
+  bottom: -1px;
+  left: 0;
+}
+.vis-graph-group0 {
+    fill:#4f81bd;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #4f81bd;
+}
+
+.vis-graph-group1 {
+    fill:#f79646;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #f79646;
+}
+
+.vis-graph-group2 {
+    fill: #8c51cf;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #8c51cf;
+}
+
+.vis-graph-group3 {
+    fill: #75c841;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #75c841;
+}
+
+.vis-graph-group4 {
+    fill: #ff0100;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #ff0100;
+}
+
+.vis-graph-group5 {
+    fill: #37d8e6;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #37d8e6;
+}
+
+.vis-graph-group6 {
+    fill: #042662;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #042662;
+}
+
+.vis-graph-group7 {
+    fill:#00ff26;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #00ff26;
+}
+
+.vis-graph-group8 {
+    fill:#ff00ff;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #ff00ff;
+}
+
+.vis-graph-group9 {
+    fill: #8f3938;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #8f3938;
+}
+
+.vis-timeline .vis-fill {
+    fill-opacity:0.1;
+    stroke: none;
+}
+
+
+.vis-timeline .vis-bar {
+    fill-opacity:0.5;
+    stroke-width:1px;
+}
+
+.vis-timeline .vis-point {
+    stroke-width:2px;
+    fill-opacity:1.0;
+}
+
+
+.vis-timeline .vis-legend-background {
+    stroke-width:1px;
+    fill-opacity:0.9;
+    fill: #ffffff;
+    stroke: #c2c2c2;
+}
+
+
+.vis-timeline .vis-outline {
+    stroke-width:1px;
+    fill-opacity:1;
+    fill: #ffffff;
+    stroke: #e5e5e5;
+}
+
+.vis-timeline .vis-icon-fill {
+    fill-opacity:0.3;
+    stroke: none;
+}
+
+
+.vis-timeline {
+  position: relative;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.vis-loading-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* override some bootstrap styles screwing up the timelines css */
+
+.vis [class*="span"] {
+  min-height: 0;
+  width: auto;
+}
+
+
+.vis-item {
+  position: absolute;
+  color: #1A1A1A;
+  border-color: #97B0F8;
+  border-width: 1px;
+  background-color: #D5DDF6;
+  display: inline-block;
+  z-index: 1;
+  /*overflow: hidden;*/
+}
+
+.vis-item.vis-selected {
+  border-color: #FFC200;
+  background-color: #FFF785;
+
+  /* z-index must be higher than the z-index of custom time bar and current time bar */
+  z-index: 2;
+}
+
+.vis-editable.vis-selected {
+  cursor: move;
+}
+
+.vis-item.vis-point.vis-selected {
+  background-color: #FFF785;
+}
+
+.vis-item.vis-box {
+  text-align: center;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+.vis-item.vis-point {
+  background: none;
+}
+
+.vis-item.vis-dot {
+  position: absolute;
+  padding: 0;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.vis-item.vis-range {
+  border-style: solid;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.vis-item.vis-background {
+  border: none;
+  background-color: rgba(213, 221, 246, 0.4);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.vis-item .vis-item-overflow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.vis-item-visible-frame {
+  white-space: nowrap;
+}
+
+.vis-item.vis-range .vis-item-content {
+  position: relative;
+  display: inline-block;
+}
+
+.vis-item.vis-background .vis-item-content {
+  position: absolute;
+  display: inline-block;
+}
+
+.vis-item.vis-line {
+  padding: 0;
+  position: absolute;
+  width: 0;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.vis-item .vis-item-content {
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.vis-item .vis-onUpdateTime-tooltip {
+  position: absolute;
+  background: #4f81bd;
+  color: white;
+  width: 200px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 5px;
+  border-radius: 1px;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+.vis-item .vis-delete, .vis-item .vis-delete-rtl {
+  position: absolute;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  padding: 0px 5px;
+  cursor: pointer;
+
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+.vis-item .vis-delete {
+  right: -24px;
+}
+
+.vis-item .vis-delete-rtl {
+  left: -24px;
+}
+
+.vis-item .vis-delete:after, .vis-item .vis-delete-rtl:after {
+  content: "\00D7"; /* MULTIPLICATION SIGN */
+  color: red;
+  font-family: arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.vis-item .vis-delete:hover, .vis-item .vis-delete-rtl:hover {
+  background: red;
+}
+
+.vis-item .vis-delete:hover:after, .vis-item .vis-delete-rtl:hover:after {
+  color: white;
+}
+
+.vis-item .vis-drag-center {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  cursor: move;
+}
+
+.vis-item.vis-range .vis-drag-left {
+  position: absolute;
+  width: 24px;
+  max-width: 20%;
+  min-width: 2px;
+  height: 100%;
+  top: 0;
+  left: -4px;
+
+  cursor: w-resize;
+}
+
+.vis-item.vis-range .vis-drag-right {
+  position: absolute;
+  width: 24px;
+  max-width: 20%;
+  min-width: 2px;
+  height: 100%;
+  top: 0;
+  right: -4px;
+
+  cursor: e-resize;
+}
+
+.vis-range.vis-item.vis-readonly .vis-drag-left,
+.vis-range.vis-item.vis-readonly .vis-drag-right {
+  cursor: auto;
+}
+
+.vis-item.vis-cluster {
+  vertical-align: center;
+  text-align: center;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+.vis-item.vis-cluster-line {
+  padding: 0;
+  position: absolute;
+  width: 0;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.vis-item.vis-cluster-dot {
+  position: absolute;
+  padding: 0;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 4px;
+}
+div.vis-tooltip {
+  position: absolute;
+  visibility: hidden;
+  padding: 5px;
+  white-space: nowrap;
+
+  font-family: verdana;
+  font-size:14px;
+  color:#000000;
+  background-color: #f5f4ed;
+
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #808074;
+
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+.vis-itemset {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+.vis-itemset .vis-background,
+.vis-itemset .vis-foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.vis-axis {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.vis-foreground .vis-group {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.vis-foreground .vis-group:last-child {
+  border-bottom: none;
+}
+
+.vis-nesting-group {
+  cursor: pointer;
+}
+
+.vis-label.vis-nested-group.vis-group-level-unknown-but-gte1 {
+  background: #f5f5f5;
+}
+.vis-label.vis-nested-group.vis-group-level-0 {
+  background-color: #ffffff;
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-0 .vis-inner {
+  padding-left: 0;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-0 .vis-inner {
+  padding-right: 0;
+}
+.vis-label.vis-nested-group.vis-group-level-1 {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-1 .vis-inner {
+  padding-left: 15px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-1 .vis-inner {
+  padding-right: 15px;
+}
+.vis-label.vis-nested-group.vis-group-level-2 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-2 .vis-inner {
+  padding-left: 30px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-2 .vis-inner {
+  padding-right: 30px;
+}
+.vis-label.vis-nested-group.vis-group-level-3 {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-3 .vis-inner {
+  padding-left: 45px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-3 .vis-inner {
+  padding-right: 45px;
+}
+.vis-label.vis-nested-group.vis-group-level-4 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-4 .vis-inner {
+  padding-left: 60px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-4 .vis-inner {
+  padding-right: 60px;
+}
+.vis-label.vis-nested-group.vis-group-level-5 {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-5 .vis-inner {
+  padding-left: 75px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-5 .vis-inner {
+  padding-right: 75px;
+}
+.vis-label.vis-nested-group.vis-group-level-6 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-6 .vis-inner {
+  padding-left: 90px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-6 .vis-inner {
+  padding-right: 90px;
+}
+.vis-label.vis-nested-group.vis-group-level-7 {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-7 .vis-inner {
+  padding-left: 105px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-7 .vis-inner {
+  padding-right: 105px;
+}
+.vis-label.vis-nested-group.vis-group-level-8 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-8 .vis-inner {
+  padding-left: 120px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-8 .vis-inner {
+  padding-right: 120px;
+}
+.vis-label.vis-nested-group.vis-group-level-9 {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-9 .vis-inner {
+  padding-left: 135px;
+}
+.vis-rtl .vis-label.vis-nested-group.vis-group-level-9 .vis-inner {
+  padding-right: 135px;
+}
+/* default takes over beginning with level-10 (thats why we add .vis-nested-group
+  to the selectors above, to have higher specifity than these rules for the defaults) */
+.vis-label.vis-nested-group {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.vis-ltr .vis-label.vis-nested-group .vis-inner {
+  padding-left: 150px;
+}
+.vis-rtl .vis-label.vis-nested-group .vis-inner {
+  padding-right: 150px;
+}
+
+.vis-group-level-unknown-but-gte1 {
+  border: 1px solid red;
+}
+
+/* expanded/collapsed indicators */
+.vis-label.vis-nesting-group:before,
+.vis-label.vis-nesting-group:before {
+  display: inline-block;
+  width: 15px;
+}
+.vis-label.vis-nesting-group.expanded:before {
+  content: "\25BC";
+}
+.vis-label.vis-nesting-group.collapsed:before {
+  content: "\25B6";
+}
+.vis-rtl .vis-label.vis-nesting-group.collapsed:before {
+  content: "\25C0";
+}
+/* compensate missing expanded/collapsed indicator, but only at levels > 0 */
+.vis-ltr .vis-label:not(.vis-nesting-group):not(.vis-group-level-0) {
+  padding-left: 15px;
+}
+.vis-rtl .vis-label:not(.vis-nesting-group):not(.vis-group-level-0) {
+  padding-right: 15px;
+}
+
+.vis-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.vis-labelset {
+  position: relative;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.vis-labelset .vis-label {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #4d4d4d;
+
+  box-sizing: border-box;
+}
+
+.vis-labelset .vis-label {
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.vis-labelset .vis-label.draggable {
+  cursor: pointer;
+}
+
+.vis-group-is-dragging {
+  background: rgba(0, 0, 0, .1);
+}
+
+.vis-labelset .vis-label:last-child {
+  border-bottom: none;
+}
+
+.vis-labelset .vis-label .vis-inner {
+  display: inline-block;
+  padding: 5px;
+}
+
+.vis-labelset .vis-label .vis-inner.vis-hidden {
+  padding: 0;
+}
+
+div.vis-configuration {
+    position:relative;
+    display:block;
+    float:left;
+    font-size:12px;
+}
+
+div.vis-configuration-wrapper {
+    display:block;
+    width:700px;
+}
+
+div.vis-configuration-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+div.vis-configuration.vis-config-option-container{
+    display:block;
+    width:495px;
+    background-color: #ffffff;
+    border:2px solid #f7f8fa;
+    border-radius:4px;
+    margin-top:20px;
+    left:10px;
+    padding-left:5px;
+}
+
+div.vis-configuration.vis-config-button{
+    display:block;
+    width:495px;
+    height:25px;
+    vertical-align: middle;
+    line-height:25px;
+    background-color: #f7f8fa;
+    border:2px solid #ceced0;
+    border-radius:4px;
+    margin-top:20px;
+    left:10px;
+    padding-left:5px;
+    cursor: pointer;
+    margin-bottom:30px;
+}
+
+div.vis-configuration.vis-config-button.hover{
+    background-color: #4588e6;
+    border:2px solid #214373;
+    color:#ffffff;
+}
+
+div.vis-configuration.vis-config-item{
+    display:block;
+    float:left;
+    width:495px;
+    height:25px;
+    vertical-align: middle;
+    line-height:25px;
+}
+
+
+div.vis-configuration.vis-config-item.vis-config-s2{
+    left:10px;
+    background-color: #f7f8fa;
+    padding-left:5px;
+    border-radius:3px;
+}
+div.vis-configuration.vis-config-item.vis-config-s3{
+    left:20px;
+    background-color: #e4e9f0;
+    padding-left:5px;
+    border-radius:3px;
+}
+div.vis-configuration.vis-config-item.vis-config-s4{
+    left:30px;
+    background-color: #cfd8e6;
+    padding-left:5px;
+    border-radius:3px;
+}
+
+div.vis-configuration.vis-config-header{
+    font-size:18px;
+    font-weight: bold;
+}
+
+div.vis-configuration.vis-config-label{
+    width:120px;
+    height:25px;
+    line-height: 25px;
+}
+
+div.vis-configuration.vis-config-label.vis-config-s3{
+    width:110px;
+}
+div.vis-configuration.vis-config-label.vis-config-s4{
+    width:100px;
+}
+
+div.vis-configuration.vis-config-colorBlock{
+    top:1px;
+    width:30px;
+    height:19px;
+    border:1px solid #444444;
+    border-radius:2px;
+    padding:0px;
+    margin:0px;
+    cursor:pointer;
+}
+
+input.vis-configuration.vis-config-checkbox {
+    left:-5px;
+}
+
+
+input.vis-configuration.vis-config-rangeinput{
+    position:relative;
+    top:-5px;
+    width:60px;
+    /*height:13px;*/
+    padding:1px;
+    margin:0;
+    pointer-events:none;
+}
+
+input.vis-configuration.vis-config-range{
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+
+    /*fix for FF unable to apply focus style bug */
+    border: 0px solid white;
+    background-color:rgba(0,0,0,0);
+
+    /*required for proper track sizing in FF*/
+    width: 300px;
+    height:20px;
+}
+input.vis-configuration.vis-config-range::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #dedede; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dedede 0%, #c8c8c8 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(99%,#c8c8c8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #dedede 0%,#c8c8c8 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dedede 0%, #c8c8c8 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #dedede 0%,#c8c8c8 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #dedede 0%,#c8c8c8 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+
+    border: 1px solid #999999;
+    box-shadow: #aaaaaa 0px 0px 3px 0px;
+    border-radius: 3px;
+}
+input.vis-configuration.vis-config-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #14334b;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: #3876c2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3876c2 0%, #385380 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3876c2), color-stop(100%,#385380)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3876c2 0%,#385380 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3876c2 0%,#385380 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3876c2 0%,#385380 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3876c2 0%,#385380 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3876c2', endColorstr='#385380',GradientType=0 ); /* IE6-9 */
+    box-shadow: #111927 0px 0px 1px 0px;
+    margin-top: -7px;
+}
+input.vis-configuration.vis-config-range:focus {
+    outline: none;
+}
+input.vis-configuration.vis-config-range:focus::-webkit-slider-runnable-track {
+    background: #9d9d9d; /* Old browsers */
+    background: -moz-linear-gradient(top, #9d9d9d 0%, #c8c8c8 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d9d9d), color-stop(99%,#c8c8c8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #9d9d9d 0%,#c8c8c8 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #9d9d9d 0%,#c8c8c8 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #9d9d9d 0%,#c8c8c8 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #9d9d9d 0%,#c8c8c8 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d9d9d', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+}
+
+input.vis-configuration.vis-config-range::-moz-range-track {
+    width: 300px;
+    height: 10px;
+    background: #dedede; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dedede 0%, #c8c8c8 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(99%,#c8c8c8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #dedede 0%,#c8c8c8 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dedede 0%, #c8c8c8 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #dedede 0%,#c8c8c8 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #dedede 0%,#c8c8c8 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+
+    border: 1px solid #999999;
+    box-shadow: #aaaaaa 0px 0px 3px 0px;
+    border-radius: 3px;
+}
+input.vis-configuration.vis-config-range::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+
+    border-radius: 50%;
+    background:  #385380;
+}
+
+/*hide the outline behind the border*/
+input.vis-configuration.vis-config-range:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input.vis-configuration.vis-config-range::-ms-track {
+    width: 300px;
+    height: 5px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input.vis-configuration.vis-config-range::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input.vis-configuration.vis-config-range::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input.vis-configuration.vis-config-range::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background:  #385380;
+}
+input.vis-configuration.vis-config-range:focus::-ms-fill-lower {
+    background: #888;
+}
+input.vis-configuration.vis-config-range:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+.vis-configuration-popup {
+    position: absolute;
+    background: rgba(57, 76, 89, 0.85);
+    border: 2px solid #f2faff;
+    line-height:30px;
+    height:30px;
+    width:150px;
+    text-align:center;
+    color: #ffffff;
+    font-size:14px;
+    border-radius:4px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+.vis-configuration-popup:after, .vis-configuration-popup:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.vis-configuration-popup:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: rgba(57, 76, 89, 0.85);
+    border-width: 8px;
+    margin-top: -8px;
+}
+.vis-configuration-popup:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #f2faff;
+    border-width: 12px;
+    margin-top: -12px;
+}
+
+.vis-panel.vis-background.vis-horizontal .vis-grid.vis-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid;
+}
+
+.vis-panel.vis-background.vis-horizontal .vis-grid.vis-minor {
+  border-color: #e5e5e5;
+}
+
+.vis-panel.vis-background.vis-horizontal .vis-grid.vis-major {
+  border-color: #bfbfbf;
+}
+
+
+.vis-data-axis .vis-y-axis.vis-major {
+  width: 100%;
+  position: absolute;
+  color: #4d4d4d;
+  white-space: nowrap;
+}
+
+.vis-data-axis .vis-y-axis.vis-major.vis-measure {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  visibility: hidden;
+  width: auto;
+}
+
+
+.vis-data-axis .vis-y-axis.vis-minor {
+  position: absolute;
+  width: 100%;
+  color: #bebebe;
+  white-space: nowrap;
+}
+
+.vis-data-axis .vis-y-axis.vis-minor.vis-measure {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  visibility: hidden;
+  width: auto;
+}
+
+.vis-data-axis .vis-y-axis.vis-title {
+  position: absolute;
+  color: #4d4d4d;
+  white-space: nowrap;
+  bottom: 20px;
+  text-align: center;
+}
+
+.vis-data-axis .vis-y-axis.vis-title.vis-measure {
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  width: auto;
+}
+
+.vis-data-axis .vis-y-axis.vis-title.vis-left {
+  bottom: 0;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left bottom;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.vis-data-axis .vis-y-axis.vis-title.vis-right {
+  bottom: 0;
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.vis-legend {
+  background-color: rgba(247, 252, 255, 0.65);
+  padding: 5px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 2px 2px 10px rgba(154, 154, 154, 0.55);
+}
+
+.vis-legend-text {
+  /*font-size: 10px;*/
+  white-space: nowrap;
+  display: inline-block
+} .CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+ .CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+ .CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+ 
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-msup {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("app://obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c1D43F.TEX-I::before {
+  padding: 0.683em 0.681em 0 0;
+  content: "L";
+}
+
+mjx-c.mjx-c1D445.TEX-I::before {
+  padding: 0.683em 0.759em 0.021em 0;
+  content: "R";
+}
+
+mjx-c.mjx-c2295::before {
+  padding: 0.583em 0.778em 0.083em 0;
+  content: "\2295";
+}
+
+mjx-c.mjx-c1D453.TEX-I::before {
+  padding: 0.705em 0.55em 0.205em 0;
+  content: "f";
+}
+
+mjx-c.mjx-c28::before {
+  padding: 0.75em 0.389em 0.25em 0;
+  content: "(";
+}
+
+mjx-c.mjx-c2C::before {
+  padding: 0.121em 0.278em 0.194em 0;
+  content: ",";
+}
+
+mjx-c.mjx-c1D458.TEX-I::before {
+  padding: 0.694em 0.521em 0.011em 0;
+  content: "k";
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "1";
+}
+
+mjx-c.mjx-c29::before {
+  padding: 0.75em 0.389em 0.25em 0;
+  content: ")";
+}
+
+mjx-c.mjx-c1D43C.TEX-I::before {
+  padding: 0.683em 0.504em 0 0;
+  content: "I";
+}
+
+mjx-c.mjx-c1D443.TEX-I::before {
+  padding: 0.683em 0.751em 0 0;
+  content: "P";
+}
+
+mjx-c.mjx-c1D439.TEX-I::before {
+  padding: 0.68em 0.749em 0 0;
+  content: "F";
+}
+
+mjx-c.mjx-c3D::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "=";
+}
+
+mjx-c.mjx-c2212::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "\2212";
+}
+ 
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff") format("woff");
+}undefined
+</style>
+    </head>
+    <body>
+<p>La <strong>Crittografia</strong> è la pratica e lo studio delle tecniche di comunicazione per proteggere informazioni sensibili o segrete da letture non autorizzate da terzi.</p>
+<p>La crittografia è composta da 3 principali caratteristiche:</p>
+<ul>
+<li><a data-href="Autenticazione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Autenticazione.html" class="internal-link" target="_blank" rel="noopener">Autenticazione</a>: Si riferisce alla capacità di verificare l'identità del mittente di un messaggio</li>
+<li><a data-href="Affidabilità" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Affidabilit%C3%A0.html" class="internal-link" target="_blank" rel="noopener">Affidabilità</a>: Si riferisce alla capacità di garantire che il messaggio non sia stato modificato da terzi</li>
+<li><a data-href="Segretezza" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Segretezza.html" class="internal-link" target="_blank" rel="noopener">Segretezza</a>: Si riferisce alla capacità di mantenere il contenuto di un messaggio privato e non accessibile a persone non autorizzate.</li>
+</ul>
+<p><p>202303240800<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Autenticazione">Autenticazione</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, l'<strong>Autenticazine*</strong> si riferisce alla <strong>capacità di verificare l'identità del mittente di un messaggio</strong>.<br>
+In altre parole, l'autenticazione verifica l'identità del mittente del messaggio.</p>
+<p>Un metodo per garantire l'<strong>Autenticazione</strong> di un messaggio è  la <a data-href="Firma Digitale" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Firma%20Digitale.html" class="internal-link" target="_blank" rel="noopener">Firma Digitale</a> o <a data-href="Crittografia Asimmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia%20Asimmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Asimmetrica</a> a <a data-href="Chiave Privata" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20Privata.html" class="internal-link" target="_blank" rel="noopener">Chiave Privata</a>.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p><br>
+<p>202303242219<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Affidabilità">Affidabilità</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, l'<strong>Affidabilità</strong> si riferisce alla capacita di garantire che il messaggio non sia stato modificano in modo non autorizzato da terze parti diverse dal mittente.</p>
+<p>Un metodo per garantire l'<strong>Affidabilità</strong> di un messaggio è la <a data-href="Firma Digitale" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Firma%20Digitale.html" class="internal-link" target="_blank" rel="noopener">Firma Digitale</a> o <a data-href="Crittografia Asimmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia%20Asimmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Asimmetrica</a> con <a data-href="Chiave Privata" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20Privata.html" class="internal-link" target="_blank" rel="noopener">Chiave Privata</a></p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p><br>
+<p>202303242225<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Segretezza">Segretezza</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, la <strong>Segretezza</strong> si riferisce alla capacità di mantenere il contenuto di un messaggio privato e non accessibile a persone non autorizzate.<br>
+In altre parole, questa garantisce che solo il destinatario autorizzato sia in grado di leggere e comprendere il contenuto del messaggio</p>
+<p>Un metodo per garantire la <strong>Segretezza</strong> di un messaggio è attraverso la <a data-href="Crittografia Simmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia%20Simmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Simmetrica</a> o la <a data-href="Crittografia Asimmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia%20Asimmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Asimmetrica</a> con <a data-href="Chiave Pubblica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20Pubblica.html" class="internal-link" target="_blank" rel="noopener">Chiave Pubblica</a></p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p></p>
+<p>Gli <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> nei quali le lettere vengono messe a corrispondenza si dividono in due tipi</p>
+<ul>
+<li><a data-href="Alfabetismo Monoalfabetico" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Alfabetismo%20Monoalfabetico.html" class="internal-link" target="_blank" rel="noopener">Alfabetismo Monoalfabetico</a>: Nel quale si utilizza un solo alfabeto</li>
+<li><a data-href="Alfabetismo Polialfabetico" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Alfabetismo%20Polialfabetico.html" class="internal-link" target="_blank" rel="noopener">Alfabetismo Polialfabetico</a>: Nel quale si utilizzano più alfabeti</li>
+</ul>
+<p><p>202303242240<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a> <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a></p>
+<h1 data-heading="Alfabetismo Monoalfabetico">Alfabetismo Monoalfabetico</h1>
+<p>Un <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> ad <strong>Alfabetismo Monoalfabetico</strong> utilizza un solo alfabeto per criptare i dati.<br>
+Un esempio di <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> ad <strong>Alfabetismo Monoalfabetico</strong> è la <a data-href="Sostituzione Monoalfabetica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sostituzione%20Monoalfabetica.html" class="internal-link" target="_blank" rel="noopener">Sostituzione Monoalfabetica</a>, dove ogni lettera dell'alfabeto originale viene sostituito con un'altra lettera o simbolo.<br>
+Ad esempio, si sostituisce ogni lettera "A" con la lettera "X" e ogni lettera "B" con la lettera "Y".</p>
+<p>Questo tipo di <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a> è considerabile facile da decifrare, dato che viene utilizzata una mappature univoca.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p><br>
+<p>202303242245<br>
+Status:<br>
+Tags:<a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a></p>
+<h1 data-heading="Alfabetismo Polialfabetico">Alfabetismo Polialfabetico</h1>
+<p>Un <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> ad <strong>Alfabetismo Polialfabetico</strong>  utilizza più alfabeti di sostituzione per criptare i dati.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p></p>
+<p>Gli <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> vengono anche identificati in base alla regola con la quale i caratteri vengono cifrati:</p>
+<ul>
+<li><a data-href="Trasposizione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Trasposizione.html" class="internal-link" target="_blank" rel="noopener">Trasposizione</a>: Relazione tra chiave di crittografia e testo cifrato più complessa possibile</li>
+<li><a data-href="Sostituzione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Sostituzione.html" class="internal-link" target="_blank" rel="noopener">Sostituzione</a>: Distribuzione delle informazioni sulla chiave in tutto il testo cifrato</li>
+</ul>
+<p><p>202303242252<br>
+Status:<br>
+Tags:</p>
+<h1 data-heading="Trasposizione">Trasposizione</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, la <strong>Trasposizione</strong> si riferisce agli <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a> che operano sulla posizione dei caratteri del dato senza modificarne il valore.<br>
+In altre parole, questi <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> riorientano l'ordine dei caratteri del testo in chiaro.</p>
+<p>Questi sono tuttavia considerabili più deboli del metodo della <a data-href="Sostituzione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sostituzione.html" class="internal-link" target="_blank" rel="noopener">Sostituzione</a>, dato che l'ordine dei caratteri del testo in chiaro è spesso prevedibile.</p>
+<p>È importante tenere conto che nella <a data-href="Matematica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Matematica.html" class="internal-link" target="_blank" rel="noopener">Matematica</a> la <strong>Trasposizione</strong> si riferisce ad una <a data-href="Permutazione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Permutazione.html" class="internal-link" target="_blank" rel="noopener">Permutazione</a> specifica nella quale solo due elementi dell'insieme vengono scambiati di posizione.</p>
+<p>Ad <strong>esempio</strong>: Prendendo in considerazione l'<a data-href="Insieme" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Insieme.html" class="internal-link" target="_blank" rel="noopener">Insieme</a> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>I</mi><mo>=</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo></math></mjx-assistive-mml></mjx-container></span></p>
+<ul>
+<li>La <strong>Trasposizione</strong> di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> porta al risultato <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo></math></mjx-assistive-mml></mjx-container></span></li>
+<li>La <strong>Trasposizione</strong> di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> porta al risultato <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo></math></mjx-assistive-mml></mjx-container></span></li>
+</ul>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p><br>
+<p>202303242256<br>
+Status:<br>
+Tags:<a data-href="Sostituzione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sostituzione.html" class="internal-link" target="_blank" rel="noopener">Sostituzione</a></p>
+<h1 data-heading="Sostituzione">Sostituzione</h1>
+<p>In <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, con <strong>Sostituzione</strong> si intendono gli <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> che operano sulla sostituzione dei caratteri in chiaro con altri caratteri o simboli.<br>
+In pratica, questi <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> sostituiscono ogni carattere del testo in chiaro con un carattere o simbolo corrispondente alla <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a>.</p>
+<p>Questi sono considerabili più resistenti rispoetto al metodo della <a data-href="Trasposizione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Trasposizione.html" class="internal-link" target="_blank" rel="noopener">Trasposizione</a>, dato che questi cambiano i valori dei caratteri del testo in chiaro e rendono più difficile l'individuazione dei modelli di frequenza dei caratteri del testo cifrato.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p></p>
+<p>Gli <a data-href="Algoritmi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmi.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> si identificano in base al numero di chiavi utilizzate</p>
+<ul>
+<li><a data-href="Crittografia Simmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Crittografia%20Simmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Simmetrica</a> </li>
+<li><a data-href="Crittografia Asimmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Crittografia%20Asimmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Asimmetrica</a></li>
+</ul>
+<p><p>202303242311<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a> <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a></p>
+<h1 data-heading="Crittografia Simmetrica">Crittografia Simmetrica</h1>
+<p>La <strong>Crittografia Simmetrica</strong> utilizza una singola <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a> segreta condivisa tra il mittente e il destinatario per criptare e decriptare i dati.<br>
+Il problema di questo metodo è che la <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a> segreta deve essere condivisa in modo sicuro.</p>
+<p>Per permettere uno scambio sicuro della singola <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a> si utilizza l'algoritmo dello <a data-href="Scambio di chiavi di Diffie-Hellman" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Scambio%20di%20chiavi%20di%20Diffie-Hellman.html" class="internal-link" target="_blank" rel="noopener">Scambio di chiavi di Diffie-Hellman</a></p>
+<p>Un esempio di <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <strong>Crittografia Simmetrica</strong> è il <a data-href="Data Encryption Standard" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Data%20Encryption%20Standard.html" class="internal-link" target="_blank" rel="noopener">Data Encryption Standard</a> </p>
+<hr>
+<h1 data-heading="References">References</h1><br>
+</p>
+<p><p>202303242354<br>
+Status:<br>
+Tags:<a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a></p>
+<h1 data-heading="Scambio di chiavi di Diffie-Hellman">Scambio di chiavi di Diffie-Hellman</h1>
+<p>L'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> dello <strong>Scambio di chiavi di Diffie-Hellman</strong> permette lo scambio tra due parti di una <a aria-label-position="top" aria-label="Chiave di Cifratura" data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiavi di Cifratura</a> attraverso una comunicazione non protetta.</p>
+<p>Viene generalmente utilizzato per lo scambio di <a aria-label-position="top" aria-label="Chiave di Cifratura" data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiavi di Cifratura</a> per <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Crittografia Simmetrica" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia%20Simmetrica.html" class="internal-link" target="_blank" rel="noopener">Crittografia Simmetrica</a>.</p>
+<p>Funziona quanto segue:<br>
+| Alice                                                 | Bob                                                   |<br>
+| ----------------------------------------------------- | ----------------------------------------------------- |<br>
+| Possiede le chiavi pubbliche <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo>,</mo><mi>G</mi></math></mjx-assistive-mml></mjx-container></span>                    | Possiede le chiavi pubbliche <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo>,</mo><mi>G</mi></math></mjx-assistive-mml></mjx-container></span>                    |<br>
+| Sceglie il valore della chiave privata <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></mjx-assistive-mml></mjx-container></span>            | Sceglie il valore della chiave privata <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml></mjx-container></span>            |<br>
+| Genera la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></mjx-assistive-mml></mjx-container></span>  <br> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><msup><mi>G</mi><mi>a</mi></msup><mo>∗</mo><mi>m</mi><mi>o</mi><mi>d</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>            | Genera la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></mjx-assistive-mml></mjx-container></span>  <br> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>G</mi><mi>b</mi></msup><mo>∗</mo><mi>m</mi><mi>o</mi><mi>d</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>            |<br>
+| Manda la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></mjx-assistive-mml></mjx-container></span> a Bob                             | Manda la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></mjx-assistive-mml></mjx-container></span> ad Alice                          |<br>
+| Riceve la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></mjx-assistive-mml></mjx-container></span> da Bob                           | Riceve la chiave <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></mjx-assistive-mml></mjx-container></span> da Alice                         |<br>
+| Genera la chiave segreta <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mi>a</mi></msub></math></mjx-assistive-mml></mjx-container></span> <br> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mi>a</mi></msub><mo>=</mo><msup><mi>y</mi><mi>a</mi></msup><mo>∗</mo><mi>m</mi><mi>o</mi><mi>d</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> | Genera la chiave segreta <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mi>b</mi></msub></math></mjx-assistive-mml></mjx-container></span> <br> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mi>y</mi></msub><mo>=</mo><msup><mi>x</mi><mi>b</mi></msup><mo>∗</mo><mi>m</mi><mi>o</mi><mi>d</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> |</p>
+<p>Dato che algebricamente <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mi>a</mi></msub><mo>=</mo><msub><mi>k</mi><mi>b</mi></msub></math></mjx-assistive-mml></mjx-container></span> le due parti Alice e Bob hanno ora due chiavi simmetriche uguali.</p>
+<p>L'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> può anche venire spiegato attraverso l'esempio dello scambio dei colori seguente:<br>
+<img alt="diffie_hellman.png" src="diffie_hellman.png" class="internal-embed"></p>
+<hr>
+<h1 data-heading="References">References</h1></p>
+<p>Gli <a aria-label-position="top" aria-label="Algoritmo" data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmi</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> che utilizzano una o più chiavi seguono il <a data-href="Teorema di Kerckhoff" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Teorema%20di%20Kerckhoff.html" class="internal-link" target="_blank" rel="noopener">Teorema di Kerckhoff</a>, cioè che la sicurezza di un algoritmo è dato dalla chiave, non dall'algoritmo</p>
+<p><p>202303270927<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Teorema di Kerckhoff">Teorema di Kerckhoff</h1>
+<p>Il <strong>teorema di Kerchoff</strong> è un principio fondamentale della <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a> moderna che afferma che la sicurezza di un <a data-href="Cifrante" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifrante.html" class="internal-link" target="_blank" rel="noopener">Cifrante</a> non deve basarsi sulla segretezza dell'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a>, ma piuttosto sulla <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a>.</p>
+<p>Così facendo è possibile rendere l'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> pubblico per studiare la sua sicurezza più a fondo e nel caso la <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a> venga violata, non è necessario realizzare un nuovo <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a>, ma basta semplicemente cambiare  <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a>.</p>
+<hr>
+<h1 data-heading="References">References</h1></p>
+<p>Altri principi di <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a> sono:</p>
+<ul>
+<li><a data-href="Confusione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Confusione.html" class="internal-link" target="_blank" rel="noopener">Confusione</a></li>
+<li><a data-href="Diffusione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Diffusione.html" class="internal-link" target="_blank" rel="noopener">Diffusione</a></li>
+</ul>
+<p><p>202303270932<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Confusione">Confusione</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, la <strong>Confusione</strong> si riferisce alla capacità di rendere la relazione tra la <a data-href="Chiave di Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Chiave%20di%20Cifratura.html" class="internal-link" target="_blank" rel="noopener">Chiave di Cifratura</a> e il testo in chiaro il più complessa possibile, in modo che sia difficile dedurre la chiave a partire dal testo cifrato.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p><br>
+<p>202303270934<br>
+Status:<br>
+Tags:<a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Diffusione">Diffusione</h1>
+<p>Nella <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a>, la <strong>Diffusione</strong> si riferisce alla capacità di distribuire le informazioni sulla chiave in tutto il testo cifrato, in modo che una piccola modifica nella chiave produca una grande variazione nel testo cifrato</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a></p></p>
+<h4 data-heading="Esempi">Esempi</h4>
+<p>Un esempio di <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> utilizzato durano il <a data-href="IX Secolo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/IX%20Secolo.html" class="internal-link" target="_blank" rel="noopener">IX Secolo</a> è il <a data-href="Cifrario a Campale Germanico" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifrario%20a%20Campale%20Germanico.html" class="internal-link" target="_blank" rel="noopener">Cifrario a Campale Germanico</a>, utilizzato dalle forze armate <a aria-label-position="top" aria-label="Germania" data-href="Germania" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Germania.html" class="internal-link" target="_blank" rel="noopener">Tedesche</a> durante la <a data-href="Prima Guerra Mondiale" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Prima%20Guerra%20Mondiale.html" class="internal-link" target="_blank" rel="noopener">Prima Guerra Mondiale</a>.</p>
+<p><span alt="Cifrario a Campale Germanico" src="Cifrario a Campale Germanico" class="internal-embed">Cifrario a Campale Germanico</span></p>
+<p>Un'altro esempio di <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> è quello utilizzato dalla macchina <a data-href="Enigma" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Enigma.html" class="internal-link" target="_blank" rel="noopener">Enigma</a>, utilizzato dalle forze armate <a aria-label-position="top" aria-label="Germania" data-href="Germania" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Germania.html" class="internal-link" target="_blank" rel="noopener">Tedesche</a> durante la <a data-href="Seconda Guerra Mondiale" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/Seconda%20Guerra%20Mondiale.html" class="internal-link" target="_blank" rel="noopener">Seconda Guerra Mondiale</a></p>
+<p><p>202303270836<br>
+Status:<br>
+Tags:<a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a> <a data-href="Crittografia" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Crittografia.html" class="internal-link" target="_blank" rel="noopener">Crittografia</a></p>
+<h1 data-heading="Enigma">Enigma</h1>
+<p><strong>Enigma</strong> è un dispositivo <a data-href="Cifrante" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifrante.html" class="internal-link" target="_blank" rel="noopener">Cifrante</a> <a data-href="Elettromeccanico" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Elettromeccanico.html" class="internal-link" target="_blank" rel="noopener">Elettromeccanico</a> utilizzato dalle forze armate <a aria-label-position="top" aria-label="Germania" data-href="Germania" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Germania.html" class="internal-link" target="_blank" rel="noopener">Tedesche</a> durante la <a data-href="Seconda Guerra Mondiale" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Seconda%20Guerra%20Mondiale.html" class="internal-link" target="_blank" rel="noopener">Seconda Guerra Mondiale</a> per <a aria-label-position="top" aria-label="Cifratura" data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifrare</a> e <a aria-label-position="top" aria-label="Decifratura" data-href="Decifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Decifratura.html" class="internal-link" target="_blank" rel="noopener">Decifrare</a> messaggi.</p>
+<p>I componenti della macchina sono:</p>
+<ul>
+<li>Una tastiera composta dalle 26 lettere dell'alfabeto utilizzato per inserire le lettere.</li>
+<li>Una "lamp board", composta da una serie di lampadine disposte in una griglia corrispondente alla tastiera della macchina e utilizzato per visualizzare ciascun carattere decifrato per ciascun carattere immessi dalla tastiera.</li>
+<li>Dei rotori che girando progressivamente ad ogni input da tastiera cifra o decifra il carattere immesso da tastiera.</li>
+<li>Una plugboard(o pannello di controllo), composta da una piastra con prese per cavi, dove i cavi possono essere inseriti nelle prese per scambiare le coppie di lettere.</li>
+<li>Una batteria interna per alimentare la macchina, rendendola così portabile</li>
+</ul>
+<p>La chiave di cifratura della macchina <strong>Enigma</strong> è composta da:</p>
+<ul>
+<li>L'ordine della posizione dei rotori</li>
+<li>Ring settings, cioè la rotazione iniziale di ogni rotore.</li>
+<li>Configurazione della plugboard, cioè dei cavi che scambiano le coppie di lettere.</li>
+</ul>
+<p>Il componente fondamentale della macchina <strong>Enigma</strong> sono i rotori, cioè dischi metallici sottili con 26 contatti elettrici corrispondenti alle 26 lettere dell'alfabeto latino su ambo i lati.<br>
+I rotori vengono posizionati uno accanto all'altro con i contatti uniti, in modo che il segnale passasse attraverso i contatti di tutti i rotori per poi tornare indietro.<br>
+Ad ogni carattere immesso da tastiera, il primo rotore avanza di una posizione e quando completa il giro fa avanzare il rotore successivo.<br>
+In questo modo i contatti elettrici e il carattere che ne risulta cambia ad ogni immissione da tastiera.</p>
+<hr>
+<h1 data-heading="References">References</h1>
+<p><a data-href="Youtube" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Youtube.html" class="internal-link" target="_blank" rel="noopener">Youtube</a> -&gt; <a aria-label-position="top" aria-label="https://www.youtube.com/watch?v=ybkkiGtJmkM" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=ybkkiGtJmkM" target="_blank">How did the Enigma Machine work?</a></p></p>
+<p><p>202303251429<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a> <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a></p>
+<h1 data-heading="Cifrario di Feistel">Cifrario di Feistel</h1>
+<p>Il <strong>Cifrario di Feistel</strong> è un <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> <a aria-label-position="top" aria-label="Cifratura a Blocchi" data-href="Cifratura a Blocchi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura%20a%20Blocchi.html" class="internal-link" target="_blank" rel="noopener">A Blocchi</a> che ha preso il nome di <a data-href="Rete di Feistel" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Rete%20di%20Feistel.html" class="internal-link" target="_blank" rel="noopener">Rete di Feistel</a>.<br>
+Moltissimi algoritmi di <a data-href="Cifratura a Blocchi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura%20a%20Blocchi.html" class="internal-link" target="_blank" rel="noopener">Cifratura a Blocchi</a> la utilizzato, incluso il famoso <a data-href="Data Encryption Standard" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Data%20Encryption%20Standard.html" class="internal-link" target="_blank" rel="noopener">Data Encryption Standard</a>(DES).</p>
+<ol>
+<li>L'algoritmo divide il dato in due parti (uguali o non), la parte destra prende il nome di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math></mjx-assistive-mml></mjx-container></span> e la parte sinistra prende il nome di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>.</li>
+<li>Primo passaggio
+<ol>
+<li>Al blocco posto a sinistra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math></mjx-assistive-mml></mjx-container></span>) viene effettuata una funzione di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> in base all'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> utilizzato, viene effettuato uno XOR(<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo></math></mjx-assistive-mml></mjx-container></span>)  ,con il blocco posto a destra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) e infine spostato a destra. Matematicamente viene denoto come <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> dove <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span> equivale alla chiave numero 1</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra</li>
+</ol>
+</li>
+<li>Secondo passaggio
+<ol>
+<li>Al blocco posto a sinistra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) viene effettuata una funzione di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> in base all'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> utilizzato, viene effettuato uno XOR(<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo></math></mjx-assistive-mml></mjx-container></span>)  ,con il blocco posto a destra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) e infine spostato a destra. Matematicamente viene denoto come <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container></span> dove <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span> equivale alla chiave numero 2</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra </li>
+</ol>
+</li>
+<li>Terzo passaggio: I due blocchi vengono scambiati di posto
+<ol>
+<li>Il blocco a sinistra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) viene posto a destra</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra</li>
+</ol>
+</li>
+</ol>
+<p><img alt="feistel.jpeg" src="feistel.jpeg" class="internal-embed"></p>
+<p>Per compiere la decifratura:</p>
+<ol>
+<li>L'algoritmo divide il dato in due parti (uguali o non), la parte destra prende il nome di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math></mjx-assistive-mml></mjx-container></span> e la parte sinistra prende il nome di <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>.</li>
+<li>Primo passaggio
+<ol>
+<li>Al blocco posto a sinistra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) viene effettuata una funzione di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> in base all'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> utilizzato, viene effettuato uno XOR(<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo></math></mjx-assistive-mml></mjx-container></span>)  ,con il blocco posto a destra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) e infine spostato a destra. Matematicamente viene denoto a seguito di Semplificazione come <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>F</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> dove <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span> equivale alla chiave numero 1</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>F</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra</li>
+</ol>
+</li>
+<li>Secondo passaggio
+<ol>
+<li>Al blocco posto a sinistra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>⊕</mo><mi>F</mi><mo stretchy="false">(</mo><mi>L</mi><mo>⊕</mo><mi>f</mi><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>) viene effettuata una funzione di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> in base all'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> utilizzato, viene effettuato uno XOR(<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2295"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>⊕</mo></math></mjx-assistive-mml></mjx-container></span>)  ,con il blocco posto a destra (cioè  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) e infine spostato a destra. Matematicamente viene denoto a seguito di Semplificazione come <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math></mjx-assistive-mml></mjx-container></span> dove <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>k</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span> equivale alla chiave numero 2</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra </li>
+</ol>
+</li>
+<li>Terzo passaggio: I due blocchi vengono scambiati di posto
+<ol>
+<li>Il blocco a sinistra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></mjx-assistive-mml></mjx-container></span>) viene posto a destra</li>
+<li>Il blocco a destra (cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math></mjx-assistive-mml></mjx-container></span>) viene spostato a sinistra</li>
+</ol>
+</li>
+</ol>
+<p><img alt="feistel_decypher.jpeg" src="feistel_decypher.jpeg" class="internal-embed"></p>
+<hr>
+<h1 data-heading="References">References</h1><br>
+<p>202303250021<br>
+Status:<br>
+Tags: <a data-href="Sistemi" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Sistemi.html" class="internal-link" target="_blank" rel="noopener">Sistemi</a></p>
+<h1 data-heading="Data Encryption Standard">Data Encryption Standard</h1>
+<p>Il <a data-href="Data Encryption Standard" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Data%20Encryption%20Standard.html" class="internal-link" target="_blank" rel="noopener">Data Encryption Standard</a> è un <a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> pubblicato nel 1977 e standardizzato nel 1977.</p>
+<p>La chiave è formata da 64 bit ed è divisa in</p>
+<ul>
+<li>56 bit di chiave effettiva</li>
+<li>8 bit di parità (ogni ottavo bit della chiave è un bit di parità)</li>
+</ul>
+<p>L'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> prevede 16 round di <a aria-label-position="top" aria-label="Trasposizione" data-href="Trasposizione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Trasposizione.html" class="internal-link" target="_blank" rel="noopener">Trasposizioni</a> successive.<br>
+Non lavora su un alfabeto di 26 caratteri ma su file binari con byte codificati in <a data-href="ASCII" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ASCII.html" class="internal-link" target="_blank" rel="noopener">ASCII</a>, quindi 128 caratteri, dei quali solo 96 sono definiti stampabili (non sono caratteri speciali)</p>
+<ol>
+<li>Il testo di 64 bit viene suddiviso in blocchi di 8 byte e codificato in <a data-href="ASCII" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ASCII.html" class="internal-link" target="_blank" rel="noopener">ASCII</a> per ottenere una <a data-href="Stringa" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Stringa.html" class="internal-link" target="_blank" rel="noopener">Stringa</a> di 64 cifre binarie</li>
+<li>Avviene una <a data-href="Permutazione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Permutazione.html" class="internal-link" target="_blank" rel="noopener">Permutazione</a> iniziale <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>I</mi><mi>P</mi></math></mjx-assistive-mml></mjx-container></span> dei 64 bit </li>
+<li>Si compiono 16 round dell'<a data-href="Algoritmo" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Algoritmo.html" class="internal-link" target="_blank" rel="noopener">Algoritmo</a> di <a data-href="Cifratura" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifratura.html" class="internal-link" target="_blank" rel="noopener">Cifratura</a> "<a data-href="Cifrario di Feistel" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Cifrario%20di%20Feistel.html" class="internal-link" target="_blank" rel="noopener">Cifrario di Feistel</a>".</li>
+<li>Avviene una <a data-href="Permutazione" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Permutazione.html" class="internal-link" target="_blank" rel="noopener">Permutazione</a> finale inversa a quella iniziale, cioè <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.055em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi><mi>P</mi><mo>=</mo><mi>I</mi><msup><mi>P</mi><mrow data-mjx-texclass="ORD"><mo>−</mo><mn>1</mn></mrow></msup></math></mjx-assistive-mml></mjx-container></span></li>
+</ol>
+<h2 data-heading="![[2023-03-25_00-54.png]]"><img alt="2023-03-25_00-54.png" src="2023-03-25_00-54.png" class="internal-embed"></h2>
+<h1 data-heading="References">References</h1>
+<p><a data-href="ChatGPT" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/ChatGPT.html" class="internal-link" target="_blank" rel="noopener">ChatGPT</a><br>
+<a data-href="Computerphile" href="/home/oxio2/Documenti/obsidian-vault/Epico/New/New/Computerphile.html" class="internal-link" target="_blank" rel="noopener">Computerphile</a> <a aria-label-position="top" aria-label="https://www.youtube.com/watch?v=FGhj3CGxl8I" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=FGhj3CGxl8I" target="_blank">Feistel Cipher - Computerphile</a></p></p>
+    </body>
+</html>
